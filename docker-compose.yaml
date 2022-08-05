@@ -38,3 +38,11 @@ services:
       - "3000:3000"
     depends_on:
       - prometheus
+
+  app:
+    build: .
+    container_name: app
+    ports:
+      - 8181:8181
+    volumes:
+      - .:/go/src
